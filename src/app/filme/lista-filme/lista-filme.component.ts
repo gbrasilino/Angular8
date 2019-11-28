@@ -23,8 +23,12 @@ export class ListaFilmeComponent implements OnInit {
   }
 
   deletarFilme(id: number) {
-    this.filmeService.deleteFilme(id).subscribe(data => {console.log(data); this.reloadData();} ,
+    this.filmeService.deleteFilme(id).subscribe(data => {console.log(data); this.reloadData(); } ,
        error => console.log(error));
+  }
+
+  updateFilme(id: number) {
+    this.rota.navigate(['update-filmes', id]);
   }
 
 }

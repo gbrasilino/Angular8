@@ -1,0 +1,30 @@
+<h3>Cadastrar Filme</h3>
+<div [hidden]="submitted" style="width: 500px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="titulo">First Name</label>
+      <input type="text" class="form-control" id="titulo" required [(ngModel)]="filme.titulo" name="titulo">
+    </div>
+
+    <div class="form-group">
+      <label for="duracao">Duração</label>
+      <input type="text" class="form-control" id="duracao" required [(ngModel)]="filme.duracao" name="duracao">
+    </div>
+
+    <div class="form-group">
+      <label for="genero">Genero</label>
+      <input type="text" class="form-control" id="genero" required [(ngModel)]="filme.genero" name="genero">
+    </div>
+
+    <div class="form-group">
+      <label for="classificacao">Classificação</label>
+      <input type="text" class="form-control" id="classificacao" required [(ngModel)]="filme.classificacao" name="classificacao">
+    </div>
+
+    <button type="submit" class="btn btn-success">Cadastrar Filme</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Dados Registrados Corretamente!</h4>
+</div>
